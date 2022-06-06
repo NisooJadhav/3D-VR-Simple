@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>3D VR Simple</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <div class="" id="inner-wrapper">
+            <div class="item" id="front"><img
+                    src="https://html.staging.prismitsystems.com/html3d/assets/img/mystic_ft.jpg"></div>
+            <div class="item" id="back"><img
+                    src="https://html.staging.prismitsystems.com/html3d/assets/img/mystic_bk.jpg"></div>
+            <div class="item" id="top"><img
+                    src="https://html.staging.prismitsystems.com/html3d/assets/img/mystic_up.jpg"></div>
+            <div class="item" id="right"><img
+                    src="https://html.staging.prismitsystems.com/html3d/assets/img/mystic_rt.jpg"></div>
+            <div class="item" id="bottom"><img
+                    src="https://html.staging.prismitsystems.com/html3d/assets/img/mystic_dn.jpg"></div>
+            <div class="item" id="left"><img
+                    src="https://html.staging.prismitsystems.com/html3d/assets/img/mystic_lf.jpg"></div>
+        </div>
+
+    </div>
+
+    <script>
+        const world = document.querySelector("#inner-wrapper");
+        var x;
+        var y;
+
+        document.addEventListener('mousemove', function (e) {
+            x = e.clientX;
+            y = e.clientY;
+            y = -y;
+            world.style.transform = `translateZ(600px) rotateX(${y}deg) rotateY(${x}deg)`;;
+        });
+    </script>
+</body>
+
+
+</html>
